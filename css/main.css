@@ -1,0 +1,686 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    scroll-behavior: smooth;
+}
+
+/* Full Page Start */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.scroll-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.scroll-container section {
+    height: 100vh;
+    width: 100vw;
+}
+
+.dots {
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.dots li a {
+    padding: 10px;
+    width: 4px;
+    height: 5px;
+    display: block;
+}
+
+.dots li a:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.48);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-transition: -webkit-transform 0.3s ease, background-color 0.3s ease;
+    -moz-transition: -moz-transform 0.3s ease, background-color 0.3s ease;
+    -ms-transition: -ms-transform 0.3s ease, background-color 0.3s ease;
+    -o-transition: -o-transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.dots li a.active:before {
+    content: "";
+    background-color: #ffffff;
+    width: 14px;
+    height: 14px;
+    margin-top: -4px;
+    left: 7px;
+    background-color: white;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.dots-right {
+    right: 10px;
+}
+
+.dots-left {
+    left: 10px;
+}
+
+.page-0,
+.page-2 {
+    background-color: #0e86d4;
+}
+
+.page-1,
+.page-3 {
+    background-color: #0e86d4;
+}
+
+/* Full Page Scroll End */
+
+/* sidenav Start */
+.navButton {
+    position: fixed;
+    top: 10px;
+    right: 50px;
+    z-index: 5;
+    color: #e9fbea;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #05445e;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.navButton:hover {
+    background-color: rgb(34, 34, 34);
+}
+
+.sidenav img {
+    width: 200px;
+    cursor: pointer;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    background-color: #05445e;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.sidenav a {
+    padding: 12px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #e9fbea;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #274472;
+}
+
+.sidenav a:hover::after {
+    width: 100%;
+}
+
+.sidenav {
+    padding-top: 15px;
+}
+.sidenav a {
+    font-size: 18px;
+}
+
+.sidenav .profile {
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.sidenav .profile img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.sidenav .profile h3 {
+    color: #e9fbea;
+    margin: 10px 0 5px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 35px;
+}
+
+.sidenav .profile p {
+    color: #e9fbea;
+    font-size: 20px;
+    font-family: "League Spartan", sans-serif;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.nav-icons {
+    display: flex;
+    padding: 15px 32px;
+    justify-content: center;
+    size: 40%;
+}
+
+.nav-icons a {
+    padding: 10px;
+}
+
+.social a {
+    font-size: 28px;
+    color: #e9fbea;
+    margin-right: 20px;
+}
+.social a:hover {
+    color: #ff2121;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+/* sidenav End */
+
+/* Home Section */
+.page-0 .p-text {
+    color: #0c2d48;
+    height: 40vh;
+    font-size: 18.75em;
+    font-weight: 900;
+    position: absolute;
+    bottom: 0;
+    left: 43vw;
+}
+
+.page-0 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.gif {
+    align-self: center;
+}
+
+.gif img,
+.gif2 img {
+    height: auto;
+    width: 30vw;
+    border-radius: 10%;
+    margin-right: 8vw;
+}
+
+.text-box {
+    color: #e9fbea;
+    margin-left: 9vw;
+    padding-top: 3.5em;
+}
+
+.text-box div {
+    margin-bottom: -15px;
+}
+
+.greeting {
+    font-size: 1.3vw;
+    color: #e9fbea;
+}
+
+.name,
+.about {
+    /* font-size: clamp(2rem, 1em + 10vw, 4.5em); */
+    font-size: 5vw;
+    font-weight: bolder;
+    margin-left: 3rem;
+    color: #e9fbea;
+}
+
+.title {
+    font-size: 2.5em;
+    font-weight: lighter;
+    color: #f50057;
+}
+
+/* About Section */
+.page-1 .p-text {
+    color: #0c2d48;
+    height: 40vh;
+    font-size: 18.75em;
+    font-weight: 900;
+    position: absolute;
+    top: 137vh;
+    left: -25vw;
+    transform: rotate(90deg);
+}
+
+.page-1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.myImage {
+    align-self: center;
+}
+
+.myImage img {
+    height: 70vh;
+    width: auto;
+    margin-right: 10vw;
+    transition: 0.5s ease;
+    filter: grayscale(100%);
+}
+
+.myImage img:hover {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+    transition: 0.5s ease;
+    transform: scale(1.1);
+    filter: grayscale(0%);
+    -webkit-transform: rotateZ(-8deg);
+    -ms-transform: rotateZ(-8deg);
+    transform: rotateZ(-8deg);
+}
+
+.about {
+    color: #e9fbea;
+    font-family: "Carter One", cursive;
+    margin-top: 10%;
+}
+
+.pAbout {
+    width: 45rem;
+}
+
+.pText {
+    padding: 10px 0;
+    margin-left: 3rem;
+    margin-top: 5%;
+}
+
+.pText span {
+    color: #05445e;
+}
+
+/* Project Section */
+.page-2 .p-text {
+    color: #0c2d48;
+    height: 40vh;
+    font-size: 200px;
+    font-weight: 900;
+    position: absolute;
+    top: 280vh;
+    left: 85vw;
+    transform: rotate(270deg);
+}
+
+.page-2 .text-box {
+    padding-top: 1em;
+}
+
+.page-2 .text-box .tagDivAbout {
+    padding-bottom: 1rem;
+}
+
+.page-2 .text-box .tagDivCloseAbout {
+    padding-top: 1rem;
+}
+
+#card-container {
+    margin: 30px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #e9fbea;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+#card #image {
+    position: relative;
+    top: 0;
+    left: 0px;
+    z-index: 1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 10%;
+}
+
+#card #image img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+#card #content {
+    position: relative;
+    color: black;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    font-size: 20px;
+    font-family: "League Spartan", sans-serif;
+    margin-top: 10px;
+    font-weight: 900;
+}
+#card #content .icons {
+    margin-top: 2px;
+    font-size: 30px;
+}
+
+.center {
+    text-align: center;
+}
+.icons i {
+    color: black;
+    margin-top: 2px;
+    font-size: 30px;
+    padding-left: 5px;
+}
+
+.icons .fa-github:hover {
+    color: #f50000;
+}
+
+.icons .fa-link:hover {
+    color: #1600df;
+}
+
+/* Contact Section */
+.page-3 .p-text {
+    color: #0c2d48;
+    font-size: 20rem;
+    font-weight: 900;
+    position: absolute;
+    top: 355vh;
+    left: -5vw;
+}
+
+.page-3 {
+    display: flex;
+    justify-content: space-around;
+}
+.page-3 .text-box {
+    padding-top: 1em;
+}
+
+form {
+    margin-left: 3rem;
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+input,
+textarea {
+    border: none;
+    height: 5vh;
+    padding: 5px 20px;
+    font-size: 1em;
+    color: #e9fbea;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    margin-top: 10%;
+}
+
+textarea {
+    padding-top: 20px;
+    height: 20vh;
+    resize: none;
+}
+
+button {
+    height: 5vh;
+    width: 10vw;
+    background-color: #1c1c1c;
+    border: 2px solid #4e6468;
+    color: #4e6468;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+button:hover {
+    color: #fa0f07;
+}
+
+@media only screen and (max-width: 768px) {
+    .navButton {
+        top: 20px;
+        right: 20px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .page-0 .p-text {
+        font-size: 8rem;
+        bottom: 80px;
+        left: 72vw;
+        transform: rotate(270deg);
+        display: none;
+    }
+
+    .page-0,
+    .page-1,
+    .page-2 {
+        flex-direction: column;
+    }
+    .gif img {
+        height: 30vh;
+        width: auto;
+        margin: 0 auto;
+        margin-bottom: 10vw;
+        z-index: 50;
+    }
+
+    .page-0 .text-box {
+        margin-left: 12vw;
+    }
+
+    .greeting {
+        font-size: 1rem;
+    }
+
+    .name,
+    .about {
+        font-size: 2.5rem;
+        margin-left: 30px;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .tagBody,
+    .tagDiv {
+        padding-bottom: 15px;
+    }
+
+    .tagDivClose {
+        padding-top: 20px;
+    }
+
+    /* About Section */
+    .page-1 .p-text {
+        font-size: 8rem;
+        top: 137vh;
+        left: -65vw;
+        transform: rotate(90deg);
+    }
+
+    .page-1 .text-box {
+        margin-top: -60px;
+        margin-left: 3em;
+    }
+
+    .pAbout {
+        width: 80vw;
+    }
+
+    .pText {
+        padding: 0;
+        font-size: 0.6em;
+        margin-left: 2rem;
+    }
+    .tagDivAbout {
+        padding-bottom: 0.5em;
+    }
+
+    .tagDivCloseAbout {
+        padding-top: 0.5em;
+    }
+
+    .myImage img {
+        height: 40vh;
+        margin: 0 auto;
+        margin-top: -80px;
+    }
+
+    /* Projects Section */
+    .page-2 .p-text {
+        font-size: 8rem;
+        top: 280vh;
+        left: 85vw;
+        transform: rotate(270deg);
+    }
+    #card #image {
+        position: relative;
+        top: 0;
+        left: 0px;
+        z-index: 1;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        margin-top: 10%;
+    }
+
+    /* contacts Section */
+
+    .page-3 {
+        flex-direction: column;
+    }
+
+    .page-3 .p-text {
+        display: none;
+    }
+    .page-3 .text-box {
+        margin-top: 50px;
+    }
+
+    form {
+        width: 70vw;
+        row-gap: 10px;
+        margin: 20px;
+    }
+
+    .pText {
+        margin: 10%;
+    }
+
+    input,
+    textarea {
+        font-size: 0.8em;
+        margin-top: 10px;
+    }
+
+    button {
+        width: 30vw;
+    }
+    .page-3 .gif {
+        padding-bottom: 50px;
+    }
+    .page-3 .gif img {
+        height: 20vh;
+    }
+
+    .nav-icons {
+        display: flex;
+        padding: 15px 32px;
+        justify-content: center;
+        font-size: 40%;
+    }
+}
+#info {
+    margin: 5%;
+}
+#info h1 {
+    font-size: 40px;
+    color: #e9fbea;
+    font-family: "Carter One", cursive;
+}
+#info h1 span {
+    color: #05445e;
+    font-family: "Carter One", cursive;
+}
+#info p {
+    color: #e9fbea;
+    line-height: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: "League Spartan", sans-serif;
+}
